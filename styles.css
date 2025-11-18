@@ -7,10 +7,10 @@
 
 /* Body and Global Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 a {
@@ -142,14 +142,77 @@ header nav .close-menu {
     }
 
     footer .company-menu nav .nav-links {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column !important;
+        gap: 1rem !important;
     }
 
     /* Adjust button width */
     .btn-primary {
         width: 100%;
         padding: 12px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .product-corner-wrapper {
+        font-size: 16px;
+        padding: 0px 20px;
+        border-width: 3px;
+        margin-top: 10px;
+    }
+
+    .product-corner-circle {
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+    }
+
+    .hero-description {
+        font-size: 16px !important;
+        width: 100% !important;
+        margin: 20px 0 !important;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-watch-intro {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 14px !important;
+    }
+
+    .btn-watch-intro {
+        text-align: left;
+    }
+    
+    .btn-watch-intro-content {
+        justify-content: center;
+    }
+    
+    .btn-watch-intro-text {
+        align-content: center;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
     }
 }
 
@@ -208,5 +271,132 @@ footer .copyright {
 .btn-primary {
     background-color: #706FE5;
     color: #fff;
+    transition-duration: .6s;
 }
 
+.btn-primary:hover {
+    background-color: #615fd9;
+    color: #fff;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #2E3E5C;
+}
+
+.product-corner-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 4px solid #706fe5; /* border thickened */
+    border-radius: 8px;
+}
+
+.product-corner-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lingkaran di sudut */
+.product-corner-circle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 4px solid #706fe5; /* thicker circle border */
+    border-radius: 50%;
+    background-color: #fff; /* center is white */
+}
+
+.corner-top-left {
+    top: -10px;
+    left: -10px;
+}
+
+.corner-top-right {
+    top: -10px;
+    right: -10px;
+}
+
+.corner-bottom-left {
+    bottom: -10px;
+    left: -10px;
+}
+
+.corner-bottom-right {
+    bottom: -10px;
+    right: -10px;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content {
+    align-content: center;
+}
+
+.hero-text {
+    display: flex;
+}
+
+.hero-text h1,
+.product-corner-text {
+    color: #1E1F4B;
+    font-size: 58px;
+}
+
+.product-corner-text {
+    color: #706fe5;
+}
+
+.hero-description {
+    font-size: 20px;
+    width: 85%;
+    font-weight: 300;
+    color: #2E3E5C;
+    margin: 40px 0;
+}
+
+.btn-watch-intro {
+    display: inline-block;
+    width: 320px;
+    transition-duration: 0.6s;
+}
+
+.btn-watch-intro-content {
+    display: flex;
+}
+
+.btn-watch-intro-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebeafa;
+    width: 65px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.btn-watch-intro-text {
+    margin-left: 13px;
+}
+
+.btn-watch-intro:hover {
+    text-decoration: underline;
+    transform: scale(1.01);
+}
+
+header nav .nav-links li a:hover {
+    transition-duration: .6s;
+}
+
+
+header nav .nav-links li a:hover {
+    border-bottom: 1px solid #615fd9;
+    padding-bottom: 10px;
+    color: #615fd9;
+}
