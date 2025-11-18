@@ -1,0 +1,212 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Containers */
+header,
+section,
+footer {
+    padding: 2rem 10%;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+header nav .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    header .nav-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Menu toggle (hidden on desktop) */
+header nav .menu-toggle {
+    display: none;
+}
+
+/* Close menu button - only in mobile layout */
+header nav .close-menu {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header nav .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Mobile nav hidden by default */
+    header nav .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        flex-direction: column;
+        background-color: #fff;
+        padding-top: 5rem;
+        gap: 1.5rem;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s ease;
+    }
+
+    header nav .nav-links li {
+        padding: 0 5%;
+    }
+
+    /* Slide in menu when active */
+    header nav .nav-links.active {
+        right: 0;
+    }
+
+    header nav .close-menu {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+    footer {
+        padding: 0 5%;
+    }
+
+    /* Stack social media vertically */
+    footer .social-media nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    footer .social-media nav .nav-links {
+        justify-content: center;
+    }
+
+    /* Stack company menu vertically */
+    footer .company-menu {
+        text-align: center;
+    }
+
+    footer .company-menu nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    footer .company-menu nav .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Adjust button width */
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+footer {
+    background-color: #2E3E5C;
+    color: #eee;
+    padding: 0 10%;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+footer nav .nav-links a {
+    color: #eee;
+    font-size: 0.9rem;
+}
+
+footer .social-media,
+footer .company-menu,
+footer .copyright {
+    padding: 48px 0;
+}
+
+footer .social-media nav .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #706FE5;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+footer .company-menu nav .nav-links {
+    gap: 6.5rem;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 40px;
+    border-radius: 12px;
+}
+
+.btn-primary {
+    background-color: #706FE5;
+    color: #fff;
+}
+
