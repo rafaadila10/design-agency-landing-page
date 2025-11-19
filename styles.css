@@ -33,7 +33,7 @@ footer {
 
 header {
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 header nav {
@@ -560,5 +560,113 @@ header nav .nav-links li a:hover {
 
     .overview-image img {
         border-radius: 20px;
+    }
+}
+
+.testimonial-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #F9F9FF;
+    position: relative;
+}
+
+.testimonial-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0C0C2B;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.testimonial-title span {
+    color: #0C0C2B;
+}
+
+.testimonial-quote-wrapper {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 38px;
+    font-weight: 700;
+    color: #706FE5;
+    position: absolute;
+}
+
+.quote-icon.left {
+    left: -40px;
+    top: -10px;
+}
+
+.quote-icon.right {
+    right: -40px;
+    bottom: -10px;
+}
+
+.testimonial-text {
+    color: #5f6072;
+    line-height: 1.7;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.testimonial-avatars {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0 20px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+.avatar.active {
+    opacity: 1;
+    border: 3px solid #706FE5;
+    box-shadow: 0 0 10px rgba(112, 111, 229, 0.3);
+    transform: scale(1.2);
+}
+
+.testimonial-person {
+    margin-top: 10px;
+}
+
+.person-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0C0C2B;
+}
+
+.person-role {
+    color: #6b6c80;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .testimonial-avatars {
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+    }
+
+    .quote-icon.left {
+        left: 0;
+    }
+    .quote-icon.right {
+        right: 0;
     }
 }
